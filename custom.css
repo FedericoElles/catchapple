@@ -1,0 +1,54 @@
+#screen-game {
+  background: linear-gradient(to bottom, #d7dfe5 0%,#a1e8ea 76%,#1a5e12 76%,#1a5e12 76%,#26a020 100%,#26a020 100%,#1a5e12 100%);
+}
+
+.c-points {
+  z-index:2;
+  position: fixed;
+  top:0px;
+  right: 0px;
+}
+
+.c-basket {
+  z-index: 2;
+  width: 100px;
+  position: fixed;
+  bottom: 130px;
+  left: 20px;
+}
+
+
+.c-apple {
+  z-index: 3;
+  width: 80px;
+  position: fixed;
+  left: 20px;
+  top: 100px;
+}
+
+.c-tree {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+
+.c-arrow{
+  z-index: 3;
+  position: fixed;
+  bottom: 10px;
+  width: 40vw;
+  font-size: 40px;
+  padding: 30px;
+}
+
+.c-arrow-left {
+  left: 10px;
+}
+
+.c-arrow-right {
+  right: 10px;
+}

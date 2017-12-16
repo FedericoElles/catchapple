@@ -1,0 +1,115 @@
+
+@font-face {
+    font-family: "pressstart";
+    src: url("https://cdn.glitch.com/b1a4d9f7-f3ca-4680-b7aa-a7398f3dc596%2FPressStart2P.woff") format('woff');
+}
+
+body {
+  font-family: pressstart;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+/* Screen */
+
+.c-screen {
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+
+
+.c-screen.is-visible{
+  display: block;
+}
+
+/* Title and Text*/
+
+.c-title {
+  font-size: 20px;
+  text-align:center;
+  padding: 20px;
+}
+
+.c-text {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.c-text--button {
+  padding: 10px;
+}
+
+.c-text--highlight {
+  color: #4096EE;
+  text-shadow: white 2px 2px, white -2px 2px, white 2px -2px, white -2px -2px;
+}
+
+
+/* Button */
+
+.c-button {
+  font-family: pressstart;
+  border: 3px solid #4096EE;
+  background: white;
+  color: #4096EE;
+  font-size: 16px;
+  padding: 10px;
+  width: 50vw;
+  display: block;
+}
+
+
+.c-button--big {
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.c-button--small{
+  width: auto;
+}
+
+
+
+
+/* helpers */
+
+
+.u-text-center {
+  text-align:center;
+}
+
+.u-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-float-right {
+  float: right;
+}
+
+.u-float-left {
+  float:left;
+}
+
+
+.u-space-1 {
+  margin: 10px;
+}
+
+.u-index-1 {
+  z-index: 1;
+}
+
+
+.u-index-2 {
+  z-index: 2;
+}
+
+
+.u-index-3 {
+  z-index: 3;
+}
