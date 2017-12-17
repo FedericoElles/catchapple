@@ -40,6 +40,12 @@ function clickable(selector, eventName){
 }
 
 
+function emit(eventName){
+  console.log('EVENT: ' + eventName);
+  ee.emitEvent(eventName);
+}
+
+
 // on(eventName, function)
 
 function on(eventName, cb){
@@ -144,6 +150,14 @@ function setContent(selector, value){
 }
 
 
+function addClass(selector, className){
+  document.querySelector(selector).classList.add(className);
+}
+
+function removeClass(selector, className){
+  document.querySelector(selector).classList.remove(className);
+}
+
 //animation - envt if animation ends
 //Example: https://desandro.github.io/3dtransforms/examples/card-01.html
 
@@ -163,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
 
       document.querySelector('#' + target).classList.add('is-visible');
-
+      emit(target); 
     });
   });
   
