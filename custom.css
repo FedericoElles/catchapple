@@ -31,6 +31,7 @@
 .js-animate-fall {
   animation-name: fall;
   animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 
@@ -64,7 +65,7 @@
   width: 80px;
   margin-left:-40px;
   position: fixed;
-  top: 100px;
+  top: -10%;
 }
 
 .c-tree {

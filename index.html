@@ -145,16 +145,31 @@
         });
         
         
+        var gameloop;
+        
         on('screen-game', function(){
           console.log('GAME START');
+          gameloop = repeat(function(){
+            console.log('LOOP');  
+          }, 4);
+          
         });
         
         on('screen-start', function(){
           console.log('GAME STOP');
+          if (gameloop){
+            gameloop.stop();
+          }
         });
         
         
         
+        
+        
+      </script>
+      
+      
+      <script>
         
         // PUNKTE
         var points = 0;
