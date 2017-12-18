@@ -62,6 +62,11 @@ function on(eventName, cb){
 }
 
 
+function random(min, max){
+  return min + Math.round(Math.random() * (max-min));
+}
+
+
 function _showHide( selector, action ) {
   if (!selector){
     throw "Der erste Parameter muss gefüllt sein";

@@ -10,7 +10,7 @@
 }
 
 .c-basket {
-  z-index: 2;
+  z-index: 3;
   width: 100px;
   margin-left:-50px;
   position: fixed;
@@ -19,7 +19,7 @@
 }
 
 .js-animate-left {
-  transition:left 0.2s linear;
+  transition:left 0.1s linear;
 }
 
 @keyframes fall {
