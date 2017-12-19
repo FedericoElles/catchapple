@@ -163,6 +163,13 @@ function removeClass(selector, className){
   document.querySelector(selector).classList.remove(className);
 }
 
+function overlay(selector){
+  [].forEach.call(document.querySelectorAll('.c-overlay'), function( elem ) {
+        elem.classList.remove('is-visible');
+  });
+  document.querySelector(selector).classList.add('is-visible');
+}
+
 //animation - envt if animation ends
 //Example: https://desandro.github.io/3dtransforms/examples/card-01.html
 
@@ -177,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
   [].forEach.call(document.querySelectorAll('.js-screen'), function( elem ) {
     elem.addEventListener('click', function() {
       var target = elem.attributes.target.value;
-      [].forEach.call(document.querySelectorAll('.c-screen'), function( elem ) {
+      [].forEach.call(document.querySelectorAll('.c-screen, .c-overlay'), function( elem ) {
         elem.classList.remove('is-visible');
       });
 

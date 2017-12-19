@@ -117,3 +117,22 @@ body {
 .u-absolute {
   position: absolute;
 }
+
+
+.c-overlay {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  left: 50px;
+  bottom: 50px;
+  border: 3px solid #4096EE;
+  padding: 20px;
+  display: none;
+  background-color: white;
+}
+
+
+.c-overlay.is-visible{
+  display: block;
+  z-index: 10000;
+}

@@ -114,7 +114,24 @@
           ▶
         </button>
       </div>
+    </div>
+
+    
+    <div id="overlay-win" class="c-overlay">
+      <h1 class="c-title">
+        Gewonnen!
+      </h1>
       
+      <div class="c-text">
+        Du hast 10 Äpfel gefangen. Sehr gut gemacht.
+      </div>
+      
+      <button class="js-screen c-button c-button--big u-center" target="screen-start">
+        OK
+      </button>
+      
+    </div>
+    
       <script>
         
         var POINTS_TO_WIN = 10;
@@ -165,7 +182,7 @@
             if (posApple === posBasket && !hasCatched){
               var hApple = document.getElementById('apple').getBoundingClientRect().top;
               var hBasket = document.getElementById('basket').getBoundingClientRect().top;
-              if ((hApple) > hBasket){
+              if (hApple > hBasket && hApple-40 < hBasket){
                 emit('catch-apple');
                 hasCatched = true;
                 hide('#apple');
@@ -177,6 +194,10 @@
         });
         
         on('screen-start', function(){
+          emit('end');
+        });
+        
+        on('end',function(){
           console.log('GAME STOP');
           if (gameloop){
             gameloop.stop();
@@ -185,9 +206,12 @@
           if(collisionloop){
             collisionloop.stop();    
           }
+        })
+        
+        
+        on('win', function(){
+          overlay('#overlay-win');
         });
-        
-        
         
         
         
@@ -204,6 +228,7 @@
           setContent('#points', points);
           if (points === POINTS_TO_WIN){
             emit('win');
+            emit('end');
           }
         });
         
@@ -216,7 +241,6 @@
       </script>
     
       
-    </div>
 
     
   </body>
